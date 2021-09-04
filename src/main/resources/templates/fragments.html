@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link"  href="/events">All Events</a> </li>
+        <li class="nav-item"><a class ="nav-link" href="/events/create">Create Event </a></li>
+    </ul>
+</nav>
+
+<td th:fragment="address">555 Really Cool Street, STL</td>
+
+</body>
+</html>
