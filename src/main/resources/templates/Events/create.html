@@ -8,10 +8,35 @@
     <form method="post" action="/events/create">
         <div class="form-group">
             <label>Event Name
-                <input type="text" name="eventName">
+                <input th:field="${event.name}">
+                <p class="error" th:errors="${event.name}"></p>
             </label>
             <label>Description
-                <input type="text" name="eventDescription">
+                <input th:field="${event.description}">
+                <p class="error" th:errors="${event.description}"></p>
+            </label>
+            <label>Contact Email
+                <input th:field="${event.contactEmail}">
+                <p class="error" th:errors="${event.contactEmail}"></p>
+            </label>
+            <label>Location
+                <input th:field="${event.location}">
+                <p class="error" th:errors="${event.location}"></p>
+            </label>
+            <label>Registration required?
+                <input th:field="${event.registrationRequired}">
+                <p class="error" th:errors="${event.registrationRequired}"></p>
+            </label>
+            <label>Max Attendees
+                <input th:field="${event.maxAttendees}">
+                <p class="error" th:errors="${event.maxAttendees}"></p>
+            </label>
+        </div>
+        <div>
+            <label>Type
+                <select th:field="${event.type}">
+                    <option th:each="type : ${types}" th:value="${type}" th:text="${type.displayName}"></option>
+                </select>
             </label>
         </div>
         <br />

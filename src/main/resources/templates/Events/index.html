@@ -14,6 +14,9 @@
         <th>ID</th>
         <th>Event Name</th>
         <th>Description</th>
+        <th>Contact Email</th>
+        <th>Type</th>
+        <th>Edit</th>
     </tr>
     </thead>
 
@@ -21,7 +24,11 @@
         <td th:text = "${event.id}"></td>
         <td th:text = "${event.name}"></td>
         <td th:text = "${event.description}"></td>
-
+        <td th:text = "${event.contactEmail}"></td>
+        <td th:text = "${event.type.displayName}"></td>
+        <td>
+            <a th:href="@{/events/edit/{id}(id=${event.getId()})}">Edit</a>
+        </td>
 
     </tr>
 </table>
